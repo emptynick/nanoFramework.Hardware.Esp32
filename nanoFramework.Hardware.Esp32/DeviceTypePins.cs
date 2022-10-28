@@ -53,6 +53,11 @@ namespace nanoFramework.Hardware.Esp32
         /// I2S Device type
         /// </summary>
         I2S = 6 * ValueTypes.DeviceType,
+
+        /// <summary>
+        /// CAN Device type
+        /// </summary>
+        CAN = 7 * ValueTypes.DeviceType,
     };
 
     /// <summary>
@@ -366,5 +371,15 @@ namespace nanoFramework.Hardware.Esp32
         /// Used for input data typically from a microphone.
         /// </summary>
         I2S2_MDATA_IN = DeviceTypes.I2S + (2 * ValueTypes.DeviceIndex) + 4,
+
+        /// <summary>
+        /// Device function RX data for CAN 
+        /// </summary>
+        CAN_RX = DeviceTypes.CAN + (1 * ValueTypes.DeviceIndex) + 0,
+
+        /// <summary>
+        /// Device function TX data for CAN
+        /// </summary>
+        CAN_TX = DeviceTypes.CAN + (1 * ValueTypes.DeviceIndex) + 1,
     };
  }
